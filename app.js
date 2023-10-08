@@ -106,6 +106,15 @@ app.get("/login", (req, res) => {
   });
 });
 
+app.get("/signout", (req, res) => {
+    req.logout((err) => {
+      if (err) {
+        return next(err);
+      }
+      res.redirect("/");
+    });
+  });
+   
 app.get("/first", connectEnsureLogin.ensureLoggedIn(), async (req, res) => {
   res.render("first", {
     firstName: req.user.firstName,
