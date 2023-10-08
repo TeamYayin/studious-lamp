@@ -4,7 +4,9 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.addColumn('Users','role',{
-      type: Sequelize.DataTypes.STRING
+      type: Sequelize.DataTypes.STRING,
+      defaultValue: "user",
+      allowNull: false
     })
     /**
      * Add altering commands here.
