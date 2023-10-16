@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 var csrf = require("tiny-csrf");
-var cookeParser = require("cookie-parser");
 
-const { User } = require("./models");
+const { User, Event } = require("./models");
+
 const cookieParser = require("cookie-parser");
 
 const passport = require("passport");
