@@ -7,12 +7,14 @@
     <meta name="csrf-token" content="<%= csrfToken %>"/>
     <title><%= title %></title>
   </head>
-  <body class="bg-slate-300 flex justify-center items-center h-screen">
-    <div class="grid grid-cols-1 md:grid-cols-6">
-        <div class="col-span-3 md:col-start-2 md:col-span-3 p-6 bg-gray-100 rounded-lg shadow-md">
-            <h1 class="text-2xl font-bold text-gray-800">Welcome to Our Website</h1>
-            <p class="text-gray-600 mt-3">New here? <a href="/signup" class="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-20 rounded-lg font-bold">Sign up now</a></p>
-            <p class="text-gray-600 mt-2">Already have an account? <a href="/login" class="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-20 rounded-lg font-bold">Sign in now</a></p>
+  <body class="bg-slate-300">
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-100 p-8 bg-white rounded-lg shadow-lg">
+            <h1 class="text-center text-4xl font-bold mb-8 text-gray-900">Welcome to Our Website</h1>
+            <div class="text-center">
+              <p class="text-gray-900 mt-3">New here? <a href="/signup" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg font-bold text-center ml-10">Sign up</a></p>
+              <p class="text-gray-900 mt-6">Already have an account? <a href="/login" class="bg-gray-300 hover:bg-gray-400 text-gray-900 py-2 px-6 rounded-lg font-bold text-center ml-10">Sign in</a></p>
+            </div>
         </div>
     </div>
   </body>
