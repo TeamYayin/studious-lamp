@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "pooja",
-    "database": "studious-lamp",
+    "password": "admin",
+    "database": "todo_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "postgres",
-    "password": "pooja",
+    "password": "admin",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres"

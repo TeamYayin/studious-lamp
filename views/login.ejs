@@ -8,31 +8,34 @@
     <link href="./css/styles.css" rel="stylesheet" />
     <title><%= title %></title>
     </head>
-    <body>
-        <div class="grid grid-cols-6">
-            <div class="col-start-3 col-span-2">
-                <h6 class="py-4">Login to your account</h6>
-                <form action="/session" method="POST">
-                    <input name="_csrf" type="hidden" value="<%= csrfToken %>">
-                    <div class="py-3">
-                        <label for="email">email:</label>
-                        <input type="email" name="email" class="border border-gray-300 rounded text-gray-900 w-full p-2 text-sm">
-                    </div>
-                    <div class="py-3">
-                        <label for="password">password:</label>
-                        <input type="password" name="password" class="border border-gray-300 rounded text-gray-900 w-full p-2 text-sm">
-                    </div>
-                    <div class="py-3">
-                        <button type="submit" class="bg-green-500 text-black rounded px-5 py-2 font-medium mr-2 mb-2 hover:bg-green-800">Sign in</button>
-                    </div>
-                    
-                </form>
-                <% if(messages && messages.error && messages.error.length > 0)  { %>
+    <body class="bg-slate-300">
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-100 p-10 bg-white rounded shadow">
+            <h1 class="text-4xl font-bold mb-8 text-gray-900">Login to your account</h1>
+            <form action="/session" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div class="mb-4">
+                    <label for="email" class="text-gray-700">Email:</label>
+                    <input type="email" name="email" class="border border-gray-300 text-gray-900 rounded p-2 w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="text-gray-700">Password:</label>
+                    <input type="password" name="password" class="border border-gray-300 text-gray-900 rounded p-2 w-full">
+                </div>
+                <div class="flex justify-center mt-6">
+                    <button type="submit" class="text-white bg-blue-500 hover:bg-blue-600 rounded px-5 py-2">Sign In</button>
+                </div>
+            </form>
+            <div class="py-2">
+                <% if(messages && messages.error && messages.error.length>0){ %>
                     <% for(var i=0; i<messages.error.length; i++) { %>
-                            <li> <%= messages.error[i] %></li>
-                    <% } %>
-                  <% } %>
+                        <li class=" py-2 px-2 border bg-red-200 rounded"> 
+                            <%= messages.error[i] %>
+                        </li>
+                    <%} %>
+                <%}%>
             </div>
-        </div> 
-    </body>
+        </div>
+    </div>
+</body>
 </html>
