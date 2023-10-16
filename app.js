@@ -175,4 +175,8 @@ app.post(
   }
 );
 
+app.get("/createevent", connectEnsureLogin.ensureLoggedIn(), async (req, res) => {
+  res.render("createevent");
+})
+
 module.exports = app;
